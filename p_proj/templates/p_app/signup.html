@@ -1,0 +1,13 @@
+{%extends "p_app/base.html" %}
+
+{%block body_block %}
+
+<h1>Enter information </h1>
+<form method="POST">
+  {{ form.as_p }}
+  {{ form2.as_p }}
+  {% csrf_token %}
+  <input type="submit" name="" value="Register" class="btn btn-primary ">
+</form>
+
+{% endblock%}

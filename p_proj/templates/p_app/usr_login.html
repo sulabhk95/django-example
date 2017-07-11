@@ -1,0 +1,13 @@
+{%extends "p_app/base.html" %}
+
+{%block body_block %}
+
+<h1>Enter information </h1>
+<form method="post" action="{% url 'p_app:usr_login' %}">
+        {% csrf_token %}
+      <input type="text" name="username" placeholder="Username">
+  <input type="password" name="password" placeholder="Password">
+  <input type="submit" name="" value="Login" class="btn btn-primary ">
+</form>
+
+{% endblock%}
